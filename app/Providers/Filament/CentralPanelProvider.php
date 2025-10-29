@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Http\Middleware\HasCentralRole;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -28,6 +29,9 @@ class CentralPanelProvider extends PanelProvider
             ->id('central')
             ->path('central')
             ->login()
+            ->spa(hasPrefetching: true)
+            ->unsavedChangesAlerts()
+            ->databaseTransactions()
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -54,6 +58,7 @@ class CentralPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                HasCentralRole::class,
             ]);
     }
 }
