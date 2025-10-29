@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Enums\AdminRole;
+use App\Enums\RoleTypes;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,7 +21,7 @@ class HasCentralRole
         $user = $request->user();
 
         if (! $user || ! $user->hasAnyRole([
-            AdminRole::CENTRAL_ADMIN->value
+            RoleTypes::CENTRAL_ADMIN->value
         ])) {
             abort(403);
         }

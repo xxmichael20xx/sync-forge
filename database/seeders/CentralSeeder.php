@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Enums\AdminRole;
+use App\Enums\RoleTypes;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -37,6 +37,6 @@ class CentralSeeder extends Seeder
             ]
         );
 
-        $centralAdmin->assignRole(AdminRole::CENTRAL_ADMIN->value);
+        $centralAdmin->assignRole(RoleTypes::CENTRAL_ADMIN->value);
     }
 }

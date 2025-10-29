@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum AdminRole: string
+enum RoleTypes: string
 {
     case CENTRAL_ADMIN = 'Central Admin';
 }

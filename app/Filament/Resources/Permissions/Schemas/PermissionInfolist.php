@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\RolesPermissions\Schemas;
+namespace App\Filament\Resources\Permissions\Schemas;
 
 use Filament\Schemas\Schema;
 
-class RolesPermissionForm
+class PermissionInfolist
 {
     public static function configure(Schema $schema): Schema
     {
