@@ -8,7 +8,7 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class RolessTable
+class RolesTable
 {
     public static function configure(Table $table): Table
     {

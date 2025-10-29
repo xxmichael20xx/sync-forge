@@ -4,7 +4,7 @@ namespace App\Filament\Resources\Roles;
 
 use App\Filament\Resources\Roles\Pages\CreateRoles;
 use App\Filament\Resources\Roles\Pages\EditRoles;
-use App\Filament\Resources\Roles\Pages\ListRoless;
+use App\Filament\Resources\Roles\Pages\ListRoles;
 use App\Filament\Resources\Roles\Pages\ViewRoles;
 use App\Filament\Resources\Roles\RelationManagers\PermissionsRelationManager;
 use App\Filament\Resources\Roles\Schemas\RolesForm;
@@ -61,7 +61,7 @@ class RolesResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListRoless::route('/'),
+            'index' => ListRoles::route('/'),
             'create' => CreateRoles::route('/create'),
             'view' => ViewRoles::route('/{record}'),
             'edit' => EditRoles::route('/{record}/edit'),

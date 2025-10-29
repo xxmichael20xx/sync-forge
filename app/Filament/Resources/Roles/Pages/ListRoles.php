@@ -6,7 +6,7 @@ use App\Filament\Resources\Roles\RolesResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
-class ListRoless extends ListRecords
+class ListRoles extends ListRecords
 {
     protected static string $resource = RolesResource::class;
 
