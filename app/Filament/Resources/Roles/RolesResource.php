@@ -9,7 +9,7 @@ use App\Filament\Resources\Roles\Pages\ViewRoles;
 use App\Filament\Resources\Roles\RelationManagers\PermissionsRelationManager;
 use App\Filament\Resources\Roles\Schemas\RolesForm;
 use App\Filament\Resources\Roles\Schemas\RolesInfolist;
-use App\Filament\Resources\Roles\Tables\RolessTable;
+use App\Filament\Resources\Roles\Tables\RolesTable;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -48,7 +48,7 @@ class RolesResource extends Resource
 
     public static function table(Table $table): Table
     {
-        return RolessTable::configure($table);
+        return RolesTable::configure($table);
     }
 
     public static function getRelations(): array
