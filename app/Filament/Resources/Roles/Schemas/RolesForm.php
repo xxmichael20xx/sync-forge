@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Roles\Schemas;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class RolesForm
@@ -10,7 +11,11 @@ class RolesForm
     {
         return $schema
             ->components([
-                //
+                TextInput::make('name')
+                    ->label('Role Name')
+                    ->required()
+                    ->maxLength(255)
+                    ->unique(ignoreRecord: true),
             ]);
     }
 }
