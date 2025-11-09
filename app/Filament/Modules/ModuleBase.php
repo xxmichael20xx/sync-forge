@@ -2,6 +2,7 @@
 
 namespace App\Filament\Modules;
 
+use App\Enums\RoleTypes;
 use Illuminate\Support\Facades\Auth;
 
 abstract class ModuleBase
@@ -18,7 +19,7 @@ abstract class ModuleBase
         if (! $user) return false;
 
         // Central admin bypass
-        if ($user->hasRole('Central Admin')) return true;
+        if ($user->hasRole(RoleTypes::CENTRAL_ADMIN->value)) return true;
 
         return $user->modules->contains('module_name', static::moduleName());
     }
