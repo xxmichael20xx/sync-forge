@@ -7,8 +7,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "coolsam/modules": "^5.0",
-        "filament/filament": "^4.0",
+        "coolsam/modules": "*",
+        "filament/filament": "^3.3",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "spatie/laravel-permission": "^6.21"
